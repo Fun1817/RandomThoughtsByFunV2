@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Random thoughts | 💭</title>
+    <style>
+      body {
+        text-align: center;
+        margin-top: 300px;
+      }
+
+      body {
+        background-image: url('https://images.pexels.com/photos/281260/pexels-photo-281260.jpeg?cs=srgb&dl=pexels-francesco-ungaro-281260.jpg&fm=jpg');
+      }
+
+      .about {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        margin: 10px;
+        font-size: 14px;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>🤖 BeepBop...</h1>
+    <input type="text" id="userInput" placeholder="">
+    <button onclick="getResponse()">Generate Thought</button>
+    <br><br>
+    <p class="response" id="botResponse"></p>
+
+    <h2>Fun Fact: whatever you type in the box gets sent to our database and we can see what you type 👁 ... hehe</h2>
+    <h3>19/1000 thoughts made.... 💭</h3>
+
+    <div class="about">
+      <p>This was created by Fun#1817 as a Fun little project since I just started learning HTML!
+      <p>Last Updated 5/14/23</p>
+      <p>11:13 PM | EST <p>
+    </div>
+
+    <script>
+      function getResponse() {
+        let userInput = document.getElementById("userInput").value;
+        let response = aiResponse(userInput);
+        document.getElementById("botResponse").innerHTML = response;
+      }
+
+      function aiResponse(userInput) {
+        // Replace this with your AI algorithm to generate responses
+        let responses = ["Go to bed, you'll feel better in the morning", " Even when a balloon is half inflated, it is completely full.", "It won't be long before people use 'the '20s, the '30s, and the '40s' to describe the 2020s, the 2030s, and the 2040s." , "I wonder how many slices of pizza I've eaten in my lifetime." , " Does a straw have one hole, or two?" , " Millions of people are doing the exact same thing as you are right now." , "At one point in your life, you were exactly pi years old." , "Nothing is on fire. Fire is on things." , "How do our brains remember that we forgot something, but we can't remember what that thing was?" , "If James Bond is the most famous spy, wouldn't that also make him the worst spy?" , "Someone dreamt about you last night and you have no idea." , "Peer pressure as an adult is seeing your neighbor mow their lawn." , "Crabs probably think that fish can fly." , "Your first birthday is technically your second birthday." , "I wonder what my dog named me." , "Fire trucks are really water trucks." , "When we're young, we sneak out of our houses to go to parties. When we're old, we sneak out of parties to go home." , "If they mounted garbage trucks with cameras, you could update Google Maps street view every week." ,"Can you daydream at night?"];
+        let randomIndex = Math.floor(Math.random() * responses.length);
+        return responses[randomIndex];
+      }
+    </script>
+  </body>
+</html>
